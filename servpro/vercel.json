@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "servpro/package.json",
-        "use": "@vercel/node"
+        "src": "servpro/package.json", 
+        "use": "@vercel/static-build"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/servpro/src/$1"
+        "dest": "/servpro/$1"
       }
     ]
   }
